@@ -6,6 +6,7 @@ use App\Http\Controllers\PlantTypeController;
 use App\Http\Controllers\PlantCompanyController;
 use App\Http\Controllers\PlantController;
 use App\Http\Controllers\Map1Controller;
+use App\Http\Controllers\Map2Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,5 +47,8 @@ Route::get('/Plant-insert',[PlantController::class, 'insert']);
 Route::get('/Plant-update',[PlantController::class, 'update']);
 Route::get('/Plant-delete',[PlantController::class, 'delete']);
 
-Route::view('/Map1','map1');
 Route::get('/Map1',[Map1Controller::class, 'map1']);
+
+Route::get('/Map2',[Map2Controller::class, 'map2']);
+Route::get('/retrieve_db_group_cnt_table',[Map2Controller::class, 'retrieve_db_group_cnt_table']);
+Route::get('/retrieve_db_plant_loc_stgr_table',[Map2Controller::class, 'retrieve_db_plant_loc_stgr_table']);
